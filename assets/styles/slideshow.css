@@ -109,4 +109,25 @@ img {
     width: 160px;
     height: 160px;
   }
+
+  #rgb, #random, #hex {
+    height: 7vh;
+  }
+
+  .rC, .gC, .bC {
+    padding-inline: .2em;
+  }
+}
+
+@media only screen and (max-width: 510px){
+  .btnCon{
+   display: flex;
+   flex-direction: column;
+   justfiy-content: center;
+ }
+
+  #rgb, #random {
+    margin-bottom: .35em;
+  }
+
 }
