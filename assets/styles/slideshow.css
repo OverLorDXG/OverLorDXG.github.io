@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 *, *::before, *::after {
   box-sizing: border-box;
@@ -48,8 +49,8 @@ img {
 }
 
 .rC, .bC, .gC {
+  font-family: "Montserrat";
   color: white;
-  font-weight: 800;
 }
 
 .container .header {
@@ -87,12 +88,11 @@ img {
 }
 
 #hex, #rgb, #random {
-  font-family: "Nunito Sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 1.5em;
   background-color: #E97451;
   border-radius: 0.125em 0 0.125em;
   color: white;
-  font-weight: 800;
   border: 0;
   height: 5vh;
 }
@@ -120,11 +120,11 @@ img {
 }
 
 @media only screen and (max-width: 510px){
-  .btnCon{
-   display: flex;
-   flex-direction: column;
-   justfiy-content: center;
- }
+.btnCon{
+  display: flex;
+  flex-direction: column;
+  justfiy-content: center;
+}
 
   #rgb, #random {
     margin-bottom: .35em;
