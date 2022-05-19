@@ -24,20 +24,20 @@ bodyChange();
 
 // Function Write Start
 
-function update(cho, value){
-     if (cho === "w"){
-				rHandle.innerHTML = `R &laquo; ${value} &raquo;`
-				} else if (cho === "a"){
-				gHandle.innerHTML = `G &laquo; ${value} &raquo;`
-				} else if (cho === "s"){
-				bHandle.innerHTML = `B &laquo; ${value} &raquo`
-				}
+function update(cho, value) {
+    if (cho === "w") {
+        rHandle.innerHTML = `R: ${value}`
+    } else if (cho === "a") {
+        gHandle.innerHTML = `G: ${value}`
+    } else if (cho === "s") {
+        bHandle.innerHTML = `B: ${value}`
+    }
 }
 
-function bodyChange(){
-				var combined = w.value+","+a.value+","+s.value;
-				var body = document.body
-				body.style.backgroundColor = "rgb("+combined+")"
+function bodyChange() {
+    var combined = w.value + "," + a.value + "," + s.value;
+    var body = document.body
+    body.style.backgroundColor = "rgb(" + combined + ")"
 }
 
 function rgbToHex() {
@@ -50,49 +50,49 @@ function rgbToHex() {
     }
     if (rHex.length > 2 || gHex.length > 2 || bHex.length > 2) return false;
     var hex = '#' + rHex + gHex + bHex;
-    
+
     var body = document.querySelector("#place");
-			body.value = hex;
-			body.select()
-			body.setSelectionRange(0, 99999);
-			navigator.clipboard.writeText(body.value)
+    body.value = hex;
+    body.select()
+    body.setSelectionRange(0, 99999);
+    navigator.clipboard.writeText(body.value)
 }
 
 
 function randomizer() {
-     w.value = Math.floor(Math.random() * 256);
-     a.value = Math.floor(Math.random() * 256);
-     s.value = Math.floor(Math.random() * 256);
-     update("w", w.value);
-     update("a", a.value);
-     update("s", s.value);
+    w.value = Math.floor(Math.random() * 256);
+    a.value = Math.floor(Math.random() * 256);
+    s.value = Math.floor(Math.random() * 256);
+    update("w", w.value);
+    update("a", a.value);
+    update("s", s.value);
 
-     bodyChange();
+    bodyChange();
 }
 
 function rgbCopy() {
-				var combined = w.value+","+a.value+","+s.value;
-				var body = document.querySelector("#place");
-				body.value = combined;
-				body.select()
-				body.setSelectionRange(0, 99999);
-				navigator.clipboard.writeText(body.value)
+    var combined = w.value + "," + a.value + "," + s.value;
+    var body = document.querySelector("#place");
+    body.value = combined;
+    body.select()
+    body.setSelectionRange(0, 99999);
+    navigator.clipboard.writeText(body.value)
 }
 
 function textedit(cho) {
-				if (cho === "rgb"){
-								var rgbEle = document.querySelector("#rgb");
-								rgbEle.innerHTML = "&raquo;Copied!&laquo;";
-								setTimeout(() => {
-												rgbEle.innerHTML = "&laquo;Copy RGB&raquo;";
-								}, 2000)
-				} else if (cho ==="hex") {
-								var rgbEle = document.querySelector("#hex");
-								rgbEle.innerHTML = "&raquo;Copied!&laquo;";
-								setTimeout(() => {
-												rgbEle.innerHTML = "&laquo;Copy Hex&raquo;";
-								}, 2000)
-				}
+    if (cho === "rgb") {
+        var rgbEle = document.querySelector("#rgb");
+        rgbEle.innerHTML = "&raquo; Copied! &laquo;";
+        setTimeout(() => {
+            rgbEle.innerHTML = "&laquo; Copy RGB &raquo;";
+        }, 2000)
+    } else if (cho === "hex") {
+        var rgbEle = document.querySelector("#hex");
+        rgbEle.innerHTML = "&raquo; Copied! &laquo;";
+        setTimeout(() => {
+            rgbEle.innerHTML = "&laquo; Copy Hex &raquo;";
+        }, 2000)
+    }
 }
 
 // Function Write End
