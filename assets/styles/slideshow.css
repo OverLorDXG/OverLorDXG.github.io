@@ -64,7 +64,7 @@ img {
 .rC, .gC, .bC {
   font-size: 2em;
   background-color: #E97451;
-  border-radius: 0.125em 0 0.125em;
+  border-radius: 50vw;
   margin-bottom: .5em;
   padding-inline: 1em;
 }
@@ -91,10 +91,10 @@ img {
   font-family: "Montserrat", sans-serif;
   font-size: 1.5em;
   background-color: #E97451;
-  border-radius: 0.125em 0 0.125em;
+  border-radius: 50vw;
   color: white;
   border: 0;
-  height: 5vh;
+  height: 7vh;
 }
 
 @media only screen and (min-width: 640px) {
@@ -110,12 +110,8 @@ img {
     height: 160px;
   }
 
-  #rgb, #random, #hex {
-    height: 7vh;
-  }
-
   .rC, .gC, .bC {
-    padding-inline: .2em;
+    padding-inline: .5em;
   }
 }
 
@@ -130,4 +126,10 @@ img {
     margin-bottom: .35em;
   }
 
+}
+
+@media only screen and (max-width: 315px){
+  #hex, #rgb, #random {
+    height: 5vh;
+  }
 }
