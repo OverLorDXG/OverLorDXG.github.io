@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Slideshow</title>
+  <link rel="stylesheet" href="assets/styles/slideshow.css">
+</head>
+<body>
+  <div class="container">
+  <div id="header" class="header">
+    <img src="https://cdn4.iconfinder.com/data/icons/yuai-video-app-vol-2/100/_-40-512.png">
+    <div class="brand">Slideshow</div>
+  </div>
+  <div id="main" class="main">
+    <div class="rC" id="rC">Red</div>
+    
+    <input type="range" id="rR" class="rR" min="0" max="255" onchange="update('w', this.value); bodyChange();" oninput="update('w', this.value); bodyChange();">
+    
+    <div class="gC" id="gC">Green</div>
+    
+    <input type="range" id="gR" class="gR" min="0" max="255" onchange="update('a', this.value); bodyChange();" oninput="update('a', this.value); bodyChange();">
+    
+    <div class="bC" id="bC">Blue</div>
+    
+    <input type="range" id="bR" class="bR" min="0" max="255" onchange="update('s', this.value); bodyChange();" oninput="update('s', this.value); bodyChange();">
+    
+    <div class="btnCon">
+      <button onclick="textedit('rgb'); rgbCopy()" id="rgb">&laquo; Copy RGB &raquo;</button>
+      <button onclick="randomizer()" id="random">&laquo; Randomize &raquo;</button>
+      <button onclick="textedit('hex'); rgbToHex()" id="hex">&laquo; Copy Hex &raquo;</button>
+      <button onclick="textedit('float'); divide()" id="toFloat">« To Float »</button>
+    </div>
+  </div>
+  <input type="text" id="place">
+  </div>
+</body>
+<script src="assets/scripts/slideshow.js"></script>
+</html>

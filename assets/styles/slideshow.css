@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  background-color:#010115;
+  color: black;
+  font-family: "Nunito Sans";
+  width: 100vw;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+img {
+  width: 80px;
+  height: 80px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #010115;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #c79eff;
+  color: #010115;
+  height: 8vh;
+}
+
+.header .brand {
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.rC, .bC, .gC {
+  font-family: "Montserrat";
+  color: white;
+}
+
+.container .header {
+  flex: 0 1 auto;
+}
+
+.container .main {
+  flex: 1 1 auto;
+}
+
+.rC, .gC, .bC {
+  font-size: 2em;
+  background-color: #E97451;
+  border-radius: 0.125em 0 0.125em;
+  margin-bottom: .5em;
+  padding-inline: 1em;
+}
+
+.rR, .gR, .bR {
+  width: 80vw;
+  accent-color: #E97451;
+}
+
+.rR , .gR {
+  margin-bottom: 1em;
+}
+
+#place {
+  position: absolute;
+  z-index: -999;
+}
+
+.btnCon {
+  margin-top: 1em;
+}
+
+#hex, #rgb, #random, #toFloat {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5em;
+  background-color: #E97451;
+  border-radius: 0.125em 0 0.125em;
+  color: white;
+  border: 0;
+  height: 5vh;
+}
+
+@media only screen and (min-width: 640px) {
+  .header {
+    height: 10vh;
+  }
+  .header .brand {
+    font-size: 2.4rem;
+  }
+  
+  img {
+    width: 160px;
+    height: 160px;
+  }
+
+  #rgb, #random, #hex {
+    height: 7vh;
+  }
+
+  .rC, .gC, .bC {
+    padding-inline: .2em;
+  }
+}
+
+@media only screen and (max-width: 510px){
+.btnCon{
+  display: flex;
+  flex-direction: column;
+  justfiy-content: center;
+}
+
+  #rgb, #random {
+    margin-bottom: .35em;
+  }
+
+}
