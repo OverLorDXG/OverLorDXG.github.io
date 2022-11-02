@@ -80,7 +80,13 @@ function rgbCopy() {
 }
 
 function divide() {
-    var combined = w.value/255 + "," + a.value/255 + "," + s.value/255;
+    var red = w.value/255
+    var green = a.value/255
+    var blue = s.value/255
+    var reds = red.slice(0,4)
+    var greens = green.slice(0,4)
+    var blues = blues.slice(0,4)
+    var combined = reds + "," + greens + "," + blues
     var body = document.querySelector("#place");
     body.value = combined;
     body.select()
