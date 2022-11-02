@@ -110,10 +110,6 @@ img {
     height: 160px;
   }
 
-  #rgb, #random, #hex {
-    height: 7vh;
-  }
-
   .rC, .gC, .bC {
     padding-inline: .2em;
   }
