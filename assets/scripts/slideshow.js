@@ -83,9 +83,9 @@ function divide() {
     var red = w.value/255
     var green = a.value/255
     var blue = s.value/255
-    var reds = red.slice(0,4)
-    var greens = green.slice(0,4)
-    var blues = blues.slice(0,4)
+    var reds = String(red).slice(0,5)
+    var greens = String(green).slice(0,5)
+    var blues = String(blue).slice(0,5)
     var combined = reds + "," + greens + "," + blues
     var body = document.querySelector("#place");
     body.value = combined;
